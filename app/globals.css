@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  color-scheme: light dark;
+  --yt-bg: #ffffff;
+  --yt-text: #0f0f0f;
+  --yt-sec: #606060;
+  --yt-chip: #f2f2f2;
+  --yt-chiph: #e5e5e5;
+  --yt-line: #e5e5e5;
+  --yt-modal: #ffffff;
+  --yt-blue: #065fd4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --yt-bg: #0f0f0f;
+    --yt-text: #f1f1f1;
+    --yt-sec: #aaaaaa;
+    --yt-chip: #272727;
+    --yt-chiph: #3f3f3f;
+    --yt-line: #303030;
+    --yt-modal: #212121;
+    --yt-blue: #3ea6ff;
   }
 }
 
+@theme inline {
+  --color-yt-bg: var(--yt-bg);
+  --color-yt-text: var(--yt-text);
+  --color-yt-sec: var(--yt-sec);
+  --color-yt-chip: var(--yt-chip);
+  --color-yt-chiph: var(--yt-chiph);
+  --color-yt-line: var(--yt-line);
+  --color-yt-modal: var(--yt-modal);
+  --color-yt-blue: var(--yt-blue);
+}
+
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--yt-bg);
+  color: var(--yt-text);
+}
+
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
